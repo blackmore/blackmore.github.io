@@ -1,0 +1,18 @@
+.time {
+  font-size: 200%;
+  text-align: center;
+}
+.date {
+  color: #999;
+  text-align: center;
+}
+.title {
+  font-size: 150%;
+}
+
+.prg-specs span, .ut, .ep, .year{
+  padding-right: 20px;
+}
+.background-text, .text, .otepis {
+  color: #999;
+}
