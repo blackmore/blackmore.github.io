@@ -11,8 +11,33 @@
 }
 
 .prg-specs span, .ut, .ep, .year{
-  padding-right: 20px;
+  margin-right: 8px;
 }
 .background-text, .text, .otepis {
   color: #999;
+}
+
+.ag {
+display:inline-block;
+padding: 0px;
+width: 21px;
+height: 21px;
+text-indent: -1000px;
+}
+
+.ag18
+{
+background:url(../images/fsk-logos.png) 22px 0;
+}
+.ag16 {
+background:url(../images/fsk-logos.png) 44px 0;
+}
+.ag12 {
+background:url(../images/fsk-logos.png) 66px 0;
+}
+.ag6 {
+ background:url(../images/fsk-logos.png) 88px 0; 
+}
+.ag0 {
+  background:url(../images/fsk-logos.png) 110px 0;
 }

@@ -34,6 +34,7 @@ function readSingleFile(evt) {
                 otepis  = sendung.find('otepis:first').text(),
                 origt  = sendung.find('origt:first').text(),
                 text  = sendung.find('text:first').text(),
+                altersempfehlung  = sendung.find('altersempfehlung:first').text(),
                 hintergrund  = sendung.find('hintergrund:first').text();
                 results.push("<div class='row'>\
                                 <div class='col-md-1'> <span class='time'>"+zeit.match(/\d\d:\d\d/)+"</span><br/><span class='date'>"+datum+"</span></div>\
@@ -45,8 +46,8 @@ function readSingleFile(evt) {
                                       <span class='otepis'>("+origt+ " / " +otepis+ ")</span>\
                                       <span><strong>" +charakter+ "</strong></span>\
                                       <span>ep: <strong>" +folge+ "</strong></span>\
-                                      <span>year: <strong>" +jahr+ "</strong></span>\
-                                      <span><strong>" +stereo+ "</strong></span>\
+                                      <span>" +age(altersempfehlung)+ "</span>\
+                                      <span><strong>" + audio(stereo) + "</strong></span>\
                                       <span><strong>" +breit+ "</strong></span>\
                                     </div>\
                                   </div>\
@@ -67,6 +68,35 @@ function readSingleFile(evt) {
     alert("Failed to load file");
   }
 };
+
+function audio(au) {
+  switch(au){
+    case 'st':
+      return '<span class="glyphicon glyphicon-sound-stereo"></span>'
+  default:
+  return ''
+  }
+};
+
+function age(ag) {
+  if (ag) {
+    switch(ag){
+    case '18':
+      return "<span class='ag ag18'>"+ag+"</span>"
+    case '16':
+      return "<span class='ag ag16'>"+ag+"</span>"
+    case '12':
+      return "<span class='ag ag12'>"+ag+"</span>"
+    case '6':
+      return "<span class='ag ag6'>"+ag+"</span>"
+    case '0':
+      return "<span class='ag ag0'>"+ag+"</span>"
+  };
+  }else{
+    return ""
+  }
+};
+
 
 $(function() {
   //$('#fileinput')[0].addEventListener('change', readSingleFile, false);
