@@ -37,7 +37,7 @@ function readSingleFile(evt) {
                 altersempfehlung  = sendung.find('altersempfehlung:first').text(),
                 hintergrund  = sendung.find('hintergrund:first').text();
                 results.push("<div class='row'>\
-                                <div class='col-md-1'> <span class='time'>"+zeit.match(/\d\d:\d\d/)+"</span><br/><span class='date'>"+datum+"</span></div>\
+                                <div class='col-md-1 text-center'> <span class='time'>"+zeit.match(/\d\d:\d\d/)+"</span><p><small>"+datum+"</small></p></div>\
                                 <div class='col-md-11'>\
                                   <div class='row'>\
                                     <div class='col-md-12 prg-specs'>\
